@@ -1,0 +1,68 @@
+@import "https://fonts.googleapis.com/css?family=Lily+Script+One";
+body {
+  background: #eee;
+  font-family: "Lily Script One";
+}
+
+.board {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(8, 100px);
+  grid-row: auto;
+  justify-content: center;
+  padding: 30px;
+  background-color: azure;
+}
+
+.card {
+  width: 95px;
+  height: 150px;
+  border: 1px solid rgb(164, 164, 164);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  background-color: aqua;
+  text-align: center;
+  border-radius: 7px;
+  gap: 40px;
+  margin-left: 40px 20px;
+  font-size: 32px;
+  transform: scale3d(1, 1, 1);
+  transition: all 0.5s ease-in-out;
+}
+
+.card.hidden:hover {
+  cursor: pointer;
+  background-color: rgba(107, 2, 81, 0.567);
+}
+
+.card.match {
+  background-color: rgba(0, 128, 0, 0.5);
+}
+
+.card.not-match {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+/* .card.flipped {
+
+} */
+
+.card.owned {
+  opacity: 0.3;
+  transform: scale3d(0.8, 0.8, 1);
+}
+
+.card.player1 {
+  background-color: #af55d9;
+}
+
+.card.player2 {
+  background-color: orange;
+}
+
+.hidden {
+  content-visibility: hidden;
+}
